@@ -82,8 +82,8 @@ app.post("/api/shorturl", function (req,response){
   })
 })
 
-app.get("/api/:shortURL", function(req,response){
-  const short = req.params.shortURL
+app.get("/api/shortURL/:short_URL", function(req,response){
+  const short = req.params.short_URL
   url.findOne({short: short}, (err,res)=>{
     if (err){
       console.log(err)
